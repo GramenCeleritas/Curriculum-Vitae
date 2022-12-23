@@ -5,55 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my CV</title>
+    <!--<link href="cv_styles.css" rel="stylesheet">-->
     <style>
-        .name1{ border-top: 10px;
-            color: rgb(0, 0, 0);
-            
-        }
-        body{border-top: 10px solid rgb(106, 170, 230);
-            border-bottom: 10px solid rgb(236, 206, 73);
-       }
-      
-      .photo1{border: thick double #acacac;
+        body {color: #333; font-family: Arial, Helvetica, sans-serif;}
+.position {font-weight: bold;}
+.name1{ border-top: 10px;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    
+}
+table, tr, td, th { border: 2px solid #000000;
+border-collapse: collapse;
+padding: 10px;
 
-        }
-       table, tr, td { border: 2px solid #000000;
-        border-collapse: collapse;
-        padding: 10px;
+} 
+th::first-letter, td::first-letter {text-transform: capitalize;}
 
-       } 
+.link1:link {color: #00f; text-decoration: underline;}
+.link1:visited {color: #005; text-decoration: underline; }
+.link1:hover {text-decoration: none;}
+ul {list-style-type: square;}
     </style>
- 
 </head>
 <body>
     <header class="header1">
-        <h1 class="name1">Vadym Lyhin</h1>
-        <a href="Hire me.html"><h2>Offer a job</h2></a>
+        <h1 class="name1"> Vadym Lyhin</h1>
+        <h2><a class="link1" href="Hire me.html">Offer a job</a></h2>
         <img class="photo1" src="photo.jpg" alt="photo of my head">
-        <h2>Junior javascript developer</h2>
+        <h2 class="position">Junior javascript developer</h2>
     </header>
     <main class="main1">
         <section>
             <h2>Work Expirience</h2>
-            <!--<dl>
-            <dt><b>2010-2012</b>-internet connection technician in <a href="https://inmart.ua/">Inmart</a></dt>
-            <dt><b>2012-2020</b>-smm manager</dt>
-            </dl>-->
         </section>
         <table >
             <thead>
             <tr>
-                <th><strong>Period:</strong></th>
-                <th><strong>Position</strong></th>
+                <th>Period:</th>
+                <th>Position</th>
             </tr>
+            <tr></tr>
             </thead>
             <tbody>
                 <tr>
                     <td>2010-2012</td>
-                    <td>internet connection technician in <a href="https://inmart.ua/">Inmart</a></td>
+                    <td >internet connection technician in <a class="link1" href="https://inmart.ua/">Inmart</a></td>
                 </tr>
                 <tr>
-                    <th rowspan="2"><strong>Description</strong></th>
+                    <th rowspan="2">Description</th>
                     <td>connection of subscribers</td>
                     
                 </tr>
@@ -63,7 +62,7 @@
                     <td>smm manager</td>
                 </tr>
                 <tr>
-                    <th rowspan="3"><strong>Description</strong></th>
+                    <th rowspan="3">Description</th>
                     <td>creating advertising posts, filling groups with content</td>
                 </tr>
                 <tr>

@@ -19,7 +19,7 @@
         }
         .inputforemail{ position: relative; left: 22px;}
         #options {position: relative; left: 8px;}
-        .email1,.inputforemail,#options{ margin-bottom: 10px;}
+        .email1,.inputforemail{ margin-bottom: 10px;}
 
     </style>
 </head>
@@ -51,14 +51,14 @@
             <label for="Description">Description:</label>
             <textarea name="Description" id="Description" rows="10" cols="40"></textarea><br />
     
-                <label for="options">Work type:</label> 
+                <label class="labelforoptions" for="options">Work type:</label>
                 <select id="options" required name="worktype">
                     <option></option>
                     <option value="Work in the office">Work in the office</option>
                     <option value="Remote work">Remote work</option>
                     <option value="One-time project">One-time project</option>
-                </select>
-            <br />
+                </select><br />
+            
 
             <input type="submit" value="Hire me">
         </fieldset>
