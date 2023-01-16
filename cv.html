@@ -7,47 +7,99 @@
     <title>my CV</title>
     <!--<link href="cv_styles.css" rel="stylesheet">-->
     <style>
-        body {color: #333; font-family: Arial, Helvetica, sans-serif;}
-.position {font-weight: bold;}
-.name1{ 
-    color: rgb(0, 0, 0);
-    font-style: italic;}
+        body {
+            color: #333; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    .name1, .position, .skills, .achivments {
-        width: 1200px;
-        height: auto;
-    }    
+        header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 50vw;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+        .conteiner {
+            display: flex;
+            flex-direction: column;
 
-.name1, .position, .skills, .achivments{
+        }
+        .photo {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border: 2px solid #87ffdb;
+            padding: 10px; 
+            width: 100px;
+            height: 100px;
+        }
+        .link,.position,.name {
+            border-bottom: 2px solid #87ffdb;
+        }
 
-    border-bottom: 2px solid #87ffdb; 
+        .position   {
+            font-weight: bold;
+        }
+        .name   {
+            position: relative;
+            color: rgb(0, 0, 0);
+            font-style: italic;}
 
-    
-}    
+        .name, .position, .skills, .achivments {
+            height: auto;
+        }    
+
+        .skills, .achivments{
+            border-bottom: 2px solid #87ffdb; 
+        }    
 
 
-table, tr, td, th { background-color: #87ffdb;
-    border: 2px solid #000000;
-border-collapse: collapse;
-padding: 10px;
+        table, tr, td, th { 
+            background-color: #87ffdb;
+            border: 2px solid #000000;
+            border-collapse: collapse;
+            padding: 10px;
+        } 
+        td::first-letter {
+            text-transform: capitalize;
+        }
+        th {
+            text-transform: uppercase; 
+            background-color: #2ef8bc;
+        }
 
-} 
-td::first-letter {text-transform: capitalize;}
-th {text-transform: uppercase; background-color: #2ef8bc;}
+        .link:link {
+            color: #00f; 
+            text-decoration: underline;
+        }
+        .link:visited {
+            color: #005; 
+            text-decoration: underline; 
+        }
+        .link:hover {
+            text-decoration: none;
+        }
+        ul {
+            list-style-type: square;
+        }
+        
 
-.link1:link {color: #00f; text-decoration: underline;}
-.link1:visited {color: #005; text-decoration: underline; }
-.link1:hover {text-decoration: none;}
-ul {list-style-type: square;}
-.photo1 {border: 2px solid #87ffdb; padding: 10px; width: 15%;}
     </style>
 </head>
 <body>
     <header class="header1">
-        <h1 class="name1"> Vadym Lyhin</h1>
-        <h2><a class="link1" href="Hire me.html">Offer a job</a></h2>
-        <img class="photo1" src="photo.jpg" alt="photo of my head">
-        <h2 class="position">Junior javascript developer</h2>
+        <div class="conteiner">
+            <h1 ><span class="name">Vadym Lyhin</span></h1>
+            <h2 ><a class="link" href="Hire me.html">Offer a job</a></h2>
+            <h2 ><span class="position">Junior javascript developer</span></h2>
+        </div>
+        
+        <img class="photo" src="photo.jpg" alt="photo for cv">
     </header>
     <main class="main1">
         <section>
