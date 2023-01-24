@@ -5,160 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my CV</title>
-    <!--<link href="cv_styles.css" rel="stylesheet">-->
-    <style>
-        body {
-            color: #333; 
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        header {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: space-between;
-            width: 50vw;
-        }
-        main {
-            display: flex;
-            flex-direction: column;
-        }
-        .conteiner {
-            display: flex;
-            flex-direction: column;
-
-        }
-        .photo {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            border: 2px solid #87ffdb;
-            padding: 10px; 
-            width: 100px;
-            height: 100px;
-        }
-        .link,.position,.name {
-            border-bottom: 2px solid #87ffdb;
-        }
-
-        .position   {
-            font-weight: bold;
-        }
-        .name   {
-            position: relative;
-            color: rgb(0, 0, 0);
-            font-style: italic;}
-
-        .name, .position, .skills, .achivments {
-            height: auto;
-        }    
-
-        .skills, .achivments{
-            border-bottom: 2px solid #87ffdb; 
-        }    
-
-
-        table, tr, td, th { 
-            background-color: #87ffdb;
-            border: 2px solid #000000;
-            border-collapse: collapse;
-            padding: 10px;
-        } 
-        td::first-letter {
-            text-transform: capitalize;
-        }
-        th {
-            text-transform: uppercase; 
-            background-color: #2ef8bc;
-        }
-
-        .link:link {
-            color: #00f; 
-            text-decoration: underline;
-        }
-        .link:visited {
-            color: #005; 
-            text-decoration: underline; 
-        }
-        .link:hover {
-            text-decoration: none;
-        }
-        ul {
-            list-style-type: square;
-        }
-        
-
-    </style>
+    <link href="cv_styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header1">
-        <div class="conteiner">
-            <h1 ><span class="name">Vadym Lyhin</span></h1>
-            <h2 ><a class="link" href="Hire me.html">Offer a job</a></h2>
-            <h2 ><span class="position">Junior javascript developer</span></h2>
+<div class="mainframe">
+    <section class="leftbar">
+        <h1 class="name">Vadym
+            <a class="surname">Lyhin</a>
+        </h1>
+        </h1>
+        <div class="photoframe">
+            <img class="photo" src="photo.jpg" alt="photo for cv">
         </div>
-        
-        <img class="photo" src="photo.jpg" alt="photo for cv">
+        <main>
+            <h3 ><span class="contact">Contact</span></h3>
+        <div class="contactpart">
+            
+            <dl>
+                <div class="headline">Adress</div>
+            <div class="underline">Dnipro Ukraine</div></dl>
+                <dl>
+                    <div class="headline">Phone</div>
+            <div class="underline">+380967189623</div></dl>
+                <dl>
+                    <div class="headline">E-mail</div>
+            <div class="underline"><a href="mailto: vadim771@ukr.net">vadim771@ukr.net</a></div></dl>
+                <dl>
+                    <div class="headline">Linkedin</div>
+            <div class="underline"><a href="https://www.linkedin.com/">https://www.linkedin.com/</a></div></dl>
+        </div>
+            <h3 ><span class="contact">Languages</span></h3>
+            <div class="contactpart">
+            
+                <dl>
+                    <div class="headline">Ukrainian-C2</div></dl>
+                <dl>
+                    <div class="headline">English-B1</div></dl>
+            </div>
+        </main>
+    </section>
+   <section class="rightbar">     
     </header>
-    <main class="main1">
-        <section>
-            <h2>Work Expirience</h2>
-        </section>
-        <table >
-            <thead>
-            <tr>
-                <th>Period:</th>
-                <th>Position</th>
-            </tr>
-            <tr></tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2010-2012</td>
-                    <td >internet connection technician in <a class="link1" href="https://inmart.ua/">Inmart</a></td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Description</th>
-                    <td>connection of subscribers</td>
-                    
-                </tr>
-                <tr><td>laying new Internet lines, soldering optical fiber</td></tr>
-                <tr>
-                    <td>2012-2020</td>
-                    <td>smm manager</td>
-                </tr>
-                <tr>
-                    <th rowspan="3">Description</th>
-                    <td>creating advertising posts, filling groups with content</td>
-                </tr>
-                <tr>
-                    <td>tracking trends, communicating with subscribers</td>
-                </tr>
-                <tr>
-                    <td>receiving advertisements from advertisers</td>
-                </tr>
-            </tbody>
-        </table>
-        <section class="skills">
-            <h2>Skills:</h2>
-            <ul>
-                <li>Adobe photoshop</li>
-                <li>Adobe Illustrator</li>
+    <main class="main">
+        <div><dt class="headline1"><h1>Summary</h1></dt>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nemo explicabo officia minus, enim eos sit quaerat earum, nostrum perspiciatis ipsam exercitationem voluptates temporibus dolor sed quasi repellendus dolores ad.</p></div>
+        <div><dt class="headline1"><h1>Skills Highlights</h1></dt>
+            <div class="skills"><ul><li>JavaScript</li>
                 <li>HTML</li>
                 <li>CSS</li>
+                <li>React</li>
             </ul>
-        </section>
-        <div class="achivments">
-            <h2>Achivments:</h2>
-            <ol>
-                <li>Did not die during covid</li>
-                <li>Won in "it generation"</li>
-                <li>Was the admin of communities with a total audience of more than 2 million people</li>
-            </ol>
-        </div>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul></div>
+            
+        
+
+    
+    
+    </div>
+        <div><dt class="headline1"><h1>Work Experience</h1></dt>
+            <div class="firstjob">
+                <span class="headline">Name of employer:</span> Ciklum, Vinnytsia <br>
+                <span class="headline">Dates of employment:</span> 03/2011 - 01/2013 <br>
+                <span class="headline">Job title:</span>internet connection technician <br>
+                <span class="headline">Project/Role description:</span>  <a></a> connection of subscribers laying new Internet lines, soldering optical fiber</div>
+            </div>
+            <div class="secondjob">
+                <span class="headline">Name of employer:</span> self-employed <br>
+                <span class="headline">Dates of employment:</span> 2014 - 2020 <br>
+                <span class="headline">Job title:</span>smm manager <br>
+                <span class="headline">Project/Role description:</span>creating advertising posts, filling groups with content, receiving advertisements from advertisers, tracking trends, communicating with subscribers
+            </div>
+        <div><dt class="headline1"><h1>Education</h1></dt>
+                <span class="headline">Dates of studying:</span> 2008 - 2013 <br>
+                <span class="headline">Name of institution:</span>The Yaroslav Mudryi National Law University <br>
+                <span class="headline">Degree and major:</span>higher education specialist diploma <br>
+            </div>
+        
+        
+        
         
     </main>
-    
+</section>
+</div>
 </body>
 </html>
