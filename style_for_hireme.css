@@ -134,12 +134,12 @@ input:focus, textarea:focus, select:focus{
 }
 
 
-input:valid {
+input:valid, textarea:valid, select:valid {
     border: 1px solid #0E6245;
 }
 
 input[type="email"]:hover {
-    background: url(./email.png) no-repeat right;
+    background: url(./assets/email.png) no-repeat right;
     background-size: 2rem;
     background-position: 97%;
     opacity: 0.5;
@@ -149,7 +149,7 @@ select {
     background: #F8FAFC;
     border-radius: 4px;
     border: 1px solid #ff0000;
-    background: url(./Vector.png) right no-repeat;
+    background: url(./assets/Vector.png) right no-repeat;
     background-size: .75em;
     background-position: 97%;
     padding: 10px;
