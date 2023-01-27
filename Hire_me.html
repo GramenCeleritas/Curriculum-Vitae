@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire me form</title>
+    <link href=".\style_for_hireme.css" rel="stylesheet" >
+</head>
+<body>
+    <header>
+        <h1>Hire me</h1>
+        <h3>Contact information</h3>
+    </header>
+    <table>
+        <tbody>
+            <tr>
+                <th><strong>Phone</strong></th>
+                <td>+380669999999</td>
+            </tr>
+            <tr>
+                <th><strong>Adress</strong></th>
+                <td>Ukraine Krym Yalta</td>
+            </tr>
+            
+        </tbody>
+        
+        
+    </table>
+    <form action="/forms.html" method="get">
+        <fieldset>
+            <legend>Contact form</legend>
+            <div class="email">
+                <label 
+                    class="email1" 
+                    for="e-mail">E-mail:</label>
+                <input  
+                    class="inputforemail" 
+                    required name="e-mail" 
+                    id="e-mail" 
+                    type="email"
+                    placeholder="enter e-mail">
+                    <span class="error">Please provide a valid email format (example@domain.com)</span>
+                    </div>
+            <div class="descriptionandtextarea">
+                <label for="Description">Description:</label>
+                <textarea class="textearea1" name="Description" id="Description" rows="10" cols="40" minlength="16" required></textarea>
+                <p class="error">Type at least 16 characters </p>
+            </div>
+            <div class="labelforoptions">
+                <label for="options">Work type:</label>
+                <select class="select1" id="options" required name="worktype">
+                    <option></option>
+                    <option value="Work in the office">Work in the office</option>
+                    <option value="Remote work">Remote work</option>
+                    <option value="One-time project">One-time project</option>
+                </select>
+                <span class="error">Error message</span>
+            </div>
+                
+            <div><input type="submit" value="Hire me"></div>
+            
+        </fieldset>
+       
+    </form>
+</body>
+</html>
+            
