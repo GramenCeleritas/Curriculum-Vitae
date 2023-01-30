@@ -1,6 +1,7 @@
 body {
     color: #333; 
     font-family: 'Roboto', sans-serif;
+    margin: 0px;
 }
 .mainframe {
     display: flex;
@@ -13,9 +14,27 @@ body {
     flex-direction: column;
     background-color: #86A3B4;
     justify-content: center;
-    width: 20vw;
     border-right: 1px solid #000000;
     padding-bottom: 300px;
+    position: fixed;
+    top: 0px;
+    width: 15%;
+    overflow: hidden;
+    height: 650px;
+}
+.child_for_scrolling {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -17px;
+    overflow-y: scroll;
+
+}
+
+.rightbar {
+    position: relative;
+    left: 18%;
 }
 
 .main {

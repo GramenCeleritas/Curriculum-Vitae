@@ -9,19 +9,14 @@ select, textarea, input {
 *:focus {outline:none !important}
 
 form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 25px;
+
+    position: absolute;
+    left: 30%;
+    top: 30%;
 }
 
 fieldset {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 1024px;
-    gap: 15px;
-    padding-left: 20px;
 }
 
 .email {
