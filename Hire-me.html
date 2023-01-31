@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hire me form</title>
-    <link href=".\style_for_hireme.css" rel="stylesheet" >
+    <link href="./style_for_hireme.css" rel="stylesheet" >
 </head>
 <body>
     <header>
@@ -30,10 +30,11 @@
     <form action="/forms.html" method="get">
         <fieldset>
             <legend>Contact form</legend>
+            <div class="filling">
             <div class="email">
                 <label 
                     class="email1" 
-                    for="e-mail">E-mail:</label>
+                    for="e-mail ">E-mail:<span class="asterisk">*</span></label>
                 <input  
                     class="inputforemail" 
                     required name="e-mail" 
@@ -43,12 +44,12 @@
                     <span class="error">Please provide a valid email format (example@domain.com)</span>
                     </div>
             <div class="descriptionandtextarea">
-                <label for="Description">Description:</label>
+                <label for="Description">Description:<span class="asterisk">*</span></label>
                 <textarea class="textearea1" placeholder="enter description" name="Description" id="Description" rows="10" cols="40" minlength="16" required></textarea>
                 <p class="error">Type at least 16 characters </p>
             </div>
             <div class="labelforoptions">
-                <label for="options">Work type:</label>
+                <label for="options">Work type:<span class="asterisk">*</span></label>
                 <select class="select1" id="options" required name="worktype">
                     <option></option>
                     <option value="Work in the office">Work in the office</option>
@@ -59,7 +60,7 @@
             </div>
                 
             <div><input type="submit" value="Hire me"></div>
-            
+        </div>
         </fieldset>
        
     </form>
