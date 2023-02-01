@@ -6,7 +6,8 @@ select, textarea, input {
     border: none;
 }
 
-*:focus {outline:none !important}
+/* the first rule of fight club: Removing outlines in CSS creates issues for people navigating the web with a keyboard.
+*:focus {outline:none !important}*/
 
 form {
 
