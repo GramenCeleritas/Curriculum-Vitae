@@ -1,0 +1,21 @@
+.main-theme {
+    /* text color */
+    --color-text-main-theme: #333333;
+
+    /* font style */
+
+    --font-family-main-theme: 'Roboto', sans-serif;
+
+    /* leftbar color */
+
+    --color-leftbar-main-theme: #86A3B4;
+
+    /* sizes */
+
+    --margin-main: 40px;
+
+    --margin-bottom-headline1: 25px;
+
+    --left-righbar-padding: 435px;
+
+}
