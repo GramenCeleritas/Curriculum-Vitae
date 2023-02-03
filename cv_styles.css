@@ -1,32 +1,28 @@
 body {
-    color: #333; 
-    font-family: 'Roboto', sans-serif;
+    color: var(--color-text-main-theme);
+    font-family: var(--font-family-main-theme);
     margin: 0px;
-    background-color: #ffffff;
+    background-color: var(--color-background-main-theme);
 }
 .mainframe {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    column-gap: 600px;
     flex-wrap: wrap;
     
 }
 
+
 .leftbar {
     display: flex;
     flex-direction: column;
-    background-color: #86A3B4;
+    background-color: var(--color-leftbar-main-theme);
     justify-content: center;
-    border-right: 1px solid #000000;
-    padding-bottom: 300px;
-    top: 0px;
-    width: 15%;
+    border-right: var(--border-leftbar-horizontal-line-right);
     overflow: hidden;
-    height: 100%;
     position: fixed;
-    height: 1667px;
-    width: 385px;
+    height: var(--leftbar-height);
+    width: var(--leftbar-width);
     border-radius: 0px;
 
 }
@@ -48,14 +44,37 @@ body {
 
 }
 
+.theme_switcher {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 310px;
+    top: 50px;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    border: var(--border-image-switch-color);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    filter: opacity(50%);
+}
+
+.icon_sv {
+    max-width: 100%;
+    max-height: 100%;
+    filter: var(--color-image-switcher);
+}
+
 .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: flex-end;
-    width: 800px;
+    width: var(--rightbar-main-width);
     gap: 20px;
-    background-color: #ffffff;
+    background-color: var(--color-background-main-theme);
+    padding-top: 23px;
 
     
 }
@@ -65,7 +84,7 @@ body {
     flex-wrap: wrap;
     align-items: baseline;
     align-content: flex-start;
-    margin-left: 40px;
+    margin-left: var(--margin-left-for-leftbar-text);
     font-size: 40px;
     font-weight: 600;
     line-height: 48px;
@@ -79,11 +98,11 @@ body {
 }
 
 .hireme {
-    color: #FFFFFF;
+    color: var(--color-text-hire-me);
 }
 
 .surname {
-    color: #1C2E8C;
+    color: var(--color-text-surname);
 }
 
 .contactpart {
@@ -92,7 +111,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     align-content: flex-start;
-    margin-left: 40px;
+    margin-left: var(--margin-left-for-leftbar-text);
 }
 
 .contact {
@@ -104,10 +123,10 @@ body {
 }
 
 h3 {
-    margin-left: 40px;
-    margin-right: 70px;
+    margin-left: var(--margin-left-for-leftbar-text);
+    margin-right: var(--margin-right-for-leftbar-headers-h3);
     padding-bottom: 6px;
-    border-bottom: 5px solid #000000;
+    border-bottom: var(--border-leftbar-side-main-theme);
 }
 
 .headline {
@@ -133,16 +152,15 @@ p {
     width: 100%;
     flex-direction: row;
     align-content: space-around;
-    gap: 250px;
+    gap: 300px;
     font-weight: bold;
 }
 
 .headline1 {
-    font-weight: bold;
     margin: 0px;
-    border-bottom: 5px solid #000000;
+    border-bottom: var(--border-headings-main-theme);
     margin-bottom: 25px;
-    font-size: 36px;
+    font-size: var(--font-size-headline1);
     font-weight: 600;
     line-height: 0px;
     letter-spacing: 0em;
