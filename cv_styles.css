@@ -8,7 +8,6 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    flex-wrap: wrap;
     
 }
 
@@ -17,56 +16,23 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--color-leftbar-main-theme);
-    justify-content: center;
     border-right: var(--border-leftbar-horizontal-line-right);
-    overflow: hidden;
     position: fixed;
     height: var(--leftbar-height);
     width: var(--leftbar-width);
     border-radius: 0px;
 
 }
-.child_for_scrolling {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: -17px;
-    overflow-y: scroll;
-
-}
 
 .rightbar {
     position: relative;
-    left: 435px;
+    left: var(--left-righbar-padding);
     border-radius: 0px;
     
 
 }
 
-.theme_switcher {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    left: 310px;
-    top: 50px;
-    width: 25px;
-    height: 25px;
-    object-fit: contain;
-    border: var(--border-image-switch-color);
-    border-radius: 5px;
-    padding: 5px;
-    cursor: pointer;
-    filter: opacity(50%);
-}
-
-.icon_sv {
-    max-width: 100%;
-    max-height: 100%;
-    filter: var(--color-image-switcher);
-}
-
-.main {
+.main_right_bar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,7 +59,8 @@ body {
 
     }
 .photo {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
 }
 
@@ -166,4 +133,37 @@ p {
     letter-spacing: 0em;
     text-align: left;
 
+}
+
+@media screen and (max-width: 550px) {
+    body{
+        width: 100vw;
+    }
+    .mainframe {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100vw;
+    }
+
+    .leftbar {
+        position: static;
+        height: 70%;
+        padding-bottom: 3rem;
+        width: 100%;
+    }
+
+    .rightbar {
+        position: static;
+        padding: 1.5rem;
+    }
+
+    .main_right_bar {
+        width: 100%;
+    }
+
+    .skills {
+        gap: 20vw;
+    }
 }

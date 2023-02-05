@@ -13,27 +13,25 @@
     /* colors */
     --color-background-main-theme: #ffffff;
     --color-leftbar-main-theme: #86A3B4;
-    --color-image-switcher: filter: invert(0%);
 
     /* sizes */
-    --leftbar-height: 1667px;
-    --leftbar-width: 385px;
-    --rightbar-main-width: 800px;
+    --leftbar-height: 105rem;
+    --leftbar-width: 26rem;
+    --rightbar-main-width: 50rem;
 
     --margin-bottom-headline1: 25px;
 
-    --left-righbar-padding: 435px;
+    --left-righbar-padding: 29rem;
 
     /* borders */
 
     --border-headings-main-theme: 5px solid #000000;
     --border-leftbar-side-main-theme: 5px solid #000000;
     --border-leftbar-horizontal-line-right: 1px solid #000000;
-    --border-image-switch-color: 1px dotted #000000;
 
     /* margin */
 
-    --margin-left-for-leftbar-text: 40px;
-    --margin-right-for-leftbar-headers-h3: 40px;
+    --margin-left-for-leftbar-text: 2.5rem;
+    --margin-right-for-leftbar-headers-h3: 2.5rem;
 } 
 
