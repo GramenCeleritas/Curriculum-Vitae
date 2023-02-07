@@ -25,9 +25,9 @@ body {
 }
 
 .rightbar {
-    position: relative;
     left: var(--left-righbar-padding);
     border-radius: 0px;
+    margin-left: var(--marigin-for-rightbar-leftside);
     
 
 }
@@ -135,6 +135,10 @@ p {
 
 }
 
+.secondjob {
+    opacity: 0.7;
+}
+
 @media screen and (max-width: 550px) {
     body{
         width: 100vw;
@@ -165,5 +169,25 @@ p {
 
     .skills {
         gap: 20vw;
+    }
+
+    .headline1 {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .leftbar {
+        box-shadow: 1px 0px 13px 7px #504B4B40;
+
+    }
+
+    .photo:hover {
+        box-shadow: 10px 10px 16px 0px #00000040;
+        transform: scale(1.5) translateX(16%);
+    }
+
+    .secondjob:hover {
+        opacity: 100%;
     }
 }
