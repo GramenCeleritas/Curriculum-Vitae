@@ -45,8 +45,9 @@ body {
     border-radius: 0px;
     margin-left: var(--marigin-for-rightbar-leftside);
     z-index: 0;
-    animation: liftright 1s linear;
-    animation-delay: 0.5s;
+    animation: liftright 1s linear forwards;
+    opacity: 0;
+    animation-delay: 1s;
 
 }
 
@@ -222,7 +223,6 @@ p {
 
     .photo:hover {
         box-shadow: 10px 10px 16px 0px #00000040;
-        /*transform: scale(1.5) translateX(16%);*/
         animation: photoscale 0.5s linear forwards;
     }
 
