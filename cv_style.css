@@ -69,10 +69,10 @@
   }
 }
 body {
-  color: #ffffff;
+  color: #333333;
   font-family: "Roboto", sans-serif;
   margin: 0px;
-  background-color: #252525;
+  background-color: #ffffff;
 }
 body .mainframe {
   display: flex;
@@ -80,10 +80,10 @@ body .mainframe {
   flex-direction: column;
 }
 body .mainframe h3 {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
   padding-bottom: 6px;
-  border-bottom: 5px solid #616161;
+  border-bottom: 5px solid #000000;
 }
 body .mainframe p {
   font-weight: bold;
@@ -94,11 +94,11 @@ body .mainframe .headline {
 body .mainframe .leftbar {
   display: flex;
   flex-direction: column;
-  background-color: #2a2e30;
-  border-right: 1px solid #818181;
+  background-color: #86A3B4;
+  border-right: 1px solid #000000;
   position: fixed;
-  height: 1667px;
-  width: 385px;
+  height: 105rem;
+  width: 26rem;
   border-radius: 0px;
   z-index: 1;
   animation-name: lift;
@@ -118,7 +118,7 @@ body .mainframe .leftbar .name {
   flex-wrap: wrap;
   align-items: baseline;
   align-content: flex-start;
-  margin-left: 40px;
+  margin-left: 2.5rem;
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
@@ -126,7 +126,7 @@ body .mainframe .leftbar .name {
   text-align: left;
 }
 body .mainframe .leftbar .surname {
-  color: #697de2;
+  color: #1C2E8C;
 }
 body .mainframe .leftbar .name {
   display: flex;
@@ -134,7 +134,7 @@ body .mainframe .leftbar .name {
   flex-wrap: wrap;
   align-items: baseline;
   align-content: flex-start;
-  margin-left: 40px;
+  margin-left: 2.5rem;
   font-size: 40px;
   font-weight: 600;
   line-height: 48px;
@@ -142,7 +142,7 @@ body .mainframe .leftbar .name {
   text-align: left;
 }
 body .mainframe .leftbar .hireme {
-  color: #bebebe;
+  color: #ffffff;
 }
 body .mainframe .leftbar .contact {
   font-size: 32px;
@@ -173,7 +173,7 @@ body .mainframe .leftbar .contactpart {
   flex-direction: column;
   align-items: flex-start;
   align-content: flex-start;
-  margin-left: 40px;
+  margin-left: 2.5rem;
 }
 body .mainframe .leftbar .underline {
   font-size: 10px;
@@ -181,7 +181,7 @@ body .mainframe .leftbar .underline {
 }
 body .mainframe .rightbar {
   position: static;
-  left: 435px;
+  left: 29rem;
   border-radius: 0px;
   margin-left: 30rem;
   z-index: 0;
@@ -198,14 +198,14 @@ body .mainframe .rightbar .main_right_bar {
   flex-direction: column;
   justify-content: center;
   align-content: flex-end;
-  width: 800px;
+  width: 50rem;
   gap: 20px;
-  background-color: #252525;
+  background-color: #ffffff;
   padding-top: 23px;
 }
 body .mainframe .rightbar .main_right_bar .headline1 {
   margin: 0px;
-  border-bottom: 5px solid #868686;
+  border-bottom: 5px solid #000000;
   margin-bottom: 25px;
   font-size: 36px;
   font-weight: 600;
