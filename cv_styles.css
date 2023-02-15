@@ -196,6 +196,7 @@ p {
     .rightbar {
         position: static;
         padding: 1.5rem;
+        margin: 0;
     }
 
     .main_right_bar {
