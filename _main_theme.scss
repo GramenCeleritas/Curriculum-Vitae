@@ -28,8 +28,13 @@
     $border-headings-main-theme: 5px solid #000000;
     $border-leftbar-side-main-theme: 5px solid #000000;
     $border-leftbar-horizontal-line-right: 1px solid #000000;
+    $border-rightbar-line-mediaForLowResolution: 3px solid #000000;
 
     /* margin */
 
     $margin-left-for-leftbar-text: 2.5rem;
     $margin-right-for-leftbar-headers-h3: 2.5rem;
+    
+    // padding
+
+    $padding-right-for-leftbar-mainContent: 0.5rem;
