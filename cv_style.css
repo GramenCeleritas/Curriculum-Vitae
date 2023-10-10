@@ -7,9 +7,22 @@
 /* margin */
 /*@import "my_theme";*/
 /*media for small screens*/
-@keyframes photoscale {
+@keyframes photoScale {
   to {
     transform: scale(1.5) translateX(16%);
+  }
+}
+@keyframes photoDecrease {
+  from {
+    transform: scale(1.5) translateX(16%);
+    box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.2509803922);
+  }
+  to {
+    transform: scale(1.2) translate(7%);
+  }
+  to {
+    transform: scale(1) translateX(0);
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2509803922);
   }
 }
 @keyframes opacitytext {
@@ -127,13 +140,22 @@ body .mainframe .leftbar .photo {
      object-fit: cover;
 }
 @media screen and (min-width: 550px) {
-  body .mainframe .leftbar .photo:hover {
+  body .mainframe .leftbar .scaled {
     box-shadow: 10px 10px 16px 0px rgba(0, 0, 0, 0.2509803922);
-    animation-name: photoscale;
+    animation-name: photoScale;
     animation-duration: 0.5s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-delay: 0;
+    animation-delay: 0s;
+  }
+}
+@media screen and (min-width: 550px) {
+  body .mainframe .leftbar .unscaled {
+    animation-name: photoDecrease;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
   }
 }
 body .mainframe .leftbar .contactpart {
