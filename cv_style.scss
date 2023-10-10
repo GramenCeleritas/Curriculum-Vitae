@@ -20,17 +20,27 @@
         box-shadow: $boxshadow;
     }
 
-    @mixin photohover($breakpoint-small) { 
-        @if ($breakpoint-small) {
-             @media screen and (min-width: $breakpoint-small) {
-                    @include box-shadow(10px 10px 16px 0px #00000040);
-                    @include animation(photoscale,0.5s,linear,forwards,0);
+    @mixin photohover() { 
+        @if (min-width: $breakpoint-small) {
+            @media screen and (min-width: $breakpoint-small) {
+                @include box-shadow(10px 10px 16px 0px #00000040);
+                @include animation(photoScale,0.5s,linear,forwards,0s);
             }
         }
+    }
 
+    @mixin photoHoverReverse() {
+        @if (min-width: $breakpoint-small) {
+            @media screen and (min-width: $breakpoint-small) {
+                @include animation(photoDecrease,0.5s,linear,forwards,0s)
+            
+            }
+
+
+        }
     }
     @mixin secondjobhover($breakpoint-small) { 
-        @if ($breakpoint-small) {
+        @if (min-width: $breakpoint-small) {
             @media screen and (min-width: $breakpoint-small) {
                     @include animation(opacitytext,1s,linear,forwards,0);
                 }
@@ -51,10 +61,27 @@
 
     
 
-    @keyframes photoscale {
+    @keyframes photoScale {
 
         to {
             transform: scale(1.5) translateX(16%);
+        }
+    }
+
+    @keyframes photoDecrease {
+
+        from {
+            transform: scale(1.5) translateX(16%);
+            box-shadow:(10px 10px 16px 0px #00000040);
+        }
+
+        to {
+            transform: scale(1.2) translate(7%);
+        }
+
+        to {
+            transform: scale(1) translateX(0);
+            box-shadow:(1px 1px 1px 0px #00000040);
         }
     }
     
@@ -179,10 +206,23 @@ body {
                     max-width: 100%;
                     max-height: 100%;
                     object-fit: cover;
-                    &:hover {
-                        @include photohover($breakpoint-small);
-                    }
+                    // &:hover {
+                    //     @include photohover();
+                    // }
                 }
+
+                .scaled {
+                    @include photohover()
+                }
+
+                .unscaled {
+                    @include photoHoverReverse()
+                }
+
+                
+
+                
+
                 .contactpart {
                     display: flex;
                     flex-wrap: wrap;
