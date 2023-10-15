@@ -380,6 +380,9 @@ body {
                         text-align: left;
                         margin: 0;
                         padding: 0;
+
+
+                        
                         
                         .headerLetterForNavigationSumarry {
                             @include borderForNavElements(0.2rem, solid, #722c2c);
@@ -419,9 +422,16 @@ body {
                         
                     }
 
+                    .firstjob {
+                        margin-top: 1rem;
+                    }
 
                     .secondEducation {
                         margin: 15px 0px 0px 0px;
+                    }
+
+                    .FirstEducationBlock {
+                        margin-top: 1rem;
                     }
 
                     .аdditional_education_line {
@@ -516,9 +526,13 @@ body {
                         
                     }
 
+                    
+
                     .elementRightBar {
                         padding-left: 2.5rem;
                         padding-right: 2.5rem;
+
+                        
                     }
 
                     .аdditional_education {

@@ -327,8 +327,14 @@ body .mainframe .rightbar .main_right_bar .headline1 .restOftextForNavigationSum
   padding: 0;
   margin: 1rem 1rem 1rem 0rem;
 }
+body .mainframe .rightbar .main_right_bar .firstjob {
+  margin-top: 1rem;
+}
 body .mainframe .rightbar .main_right_bar .secondEducation {
   margin: 15px 0px 0px 0px;
+}
+body .mainframe .rightbar .main_right_bar .FirstEducationBlock {
+  margin-top: 1rem;
 }
 body .mainframe .rightbar .main_right_bar .аdditional_education_line {
   border-bottom: 0.1rem solid #000;

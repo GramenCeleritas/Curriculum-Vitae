@@ -107,8 +107,8 @@ window.onload = function() {
     const headerLetterForNavigationEducation = document.getElementsByClassName('headerLetterForNavigationEducation')[0];
     const headerLetterForNavigationMotivationSheet = document.getElementsByClassName('headerLetterForNavigationMotivationSheet')[0];
    
-    let clickCount = 0;
 
+    let currentSection = 0;
 
     body.addEventListener('keyup', (event) => {
 
@@ -116,20 +116,28 @@ window.onload = function() {
 
         if (event.keyCode === 83) {
             
-            clickCount++;
+            currentSection++;
 
 
-            if (clickCount % 2 === 1) {
-                letterForNavigationSumarry.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-                console.log('you have pushed the button');
+            const sections = [letterForNavigationSumarry,letterForNavigationSkills]
+
+
+            if (currentSection >= sections.length) {
+                currentSection = 0;
             }
 
-            if (clickCount % 2 === 0) {
-                letterForNavigationSkills.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-                console.log('you suppose to be in skills section now');
-            }
+            sections[currentSection].scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+            console.log('Scrolled to section' + sections[currentSection])
 
-            console.log(clickCount);
+            // if (clickCount % 2 === 1) {
+            //     letterForNavigationSumarry.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+            //     console.log('you have pushed the button');
+            // }
+
+            // if (clickCount % 2 === 0) {
+            //     letterForNavigationSkills.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+            //     console.log('you suppose to be in skills section now');
+            // }
         }
 
         if (event.keyCode === 87) {
