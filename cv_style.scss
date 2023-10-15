@@ -6,6 +6,19 @@
     $breakpoint-small: 550px;
     $breakpoint-desktop: 550px;
 
+    //Variables Margin and Padding for Nav Elements 
+
+    $margin_for_nav: 1rem 0rem 1rem 0rem;
+    $padding_for_nav: 1rem 0.4rem 1rem 0.4rem;
+
+    ////////////////////////////////////////////////////
+    
+    @mixin borderForNavElements($borderWidth, $borderStyle, $borderColor) {
+        border-width: $borderWidth;
+        border-style: $borderStyle;
+        border-color: $borderColor;
+    }
+
     @mixin animation($animname,$animationdur,$animationtiming,$animdir,$animdelay) {
         animation-name: $animname;
         animation-duration: $animationdur;
@@ -350,21 +363,59 @@ body {
                     padding-top: 23px;
 
 
+                    
                     .summaryBoldText {
                         font-weight: bold;
                     }
 
                     .headline1 {
-                        margin: 0px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
                         border-bottom: $border-headings-main-theme;
-                        margin-bottom: 25px;
                         font-size: $font-size-headline1;
                         font-weight: 600;
                         line-height: 0px;
                         letter-spacing: 0em;
                         text-align: left;
+                        margin: 0;
+                        padding: 0;
                         
-                        
+                        .headerLetterForNavigationSumarry {
+                            @include borderForNavElements(0.2rem, solid, #722c2c);
+                            margin: $margin_for_nav;
+                            padding: $padding_for_nav;
+                            
+                        }
+
+                        .headerLetterForNavigationSkills {
+                            @include borderForNavElements(0.2rem, solid, #3a722c);
+                            margin: $margin_for_nav;
+                            padding: $padding_for_nav;
+                        }
+
+                        .headerLetterForNavigationWorkExpirience {
+                            @include borderForNavElements(0.2rem, solid, #2c3972);
+                            margin: $margin_for_nav;
+                            padding: 1rem 0.2rem 1rem 0.2rem;
+                        }
+
+                        .headerLetterForNavigationEducation {
+                            @include borderForNavElements(0.2rem, solid, #6c2c72);
+                            margin: $margin_for_nav;
+                            padding: $padding_for_nav;
+                        }
+
+                        .headerLetterForNavigationMotivationSheet {
+                            @include borderForNavElements(0.2rem, solid, #2c6a72);
+                            margin: $margin_for_nav;
+                            padding: 1rem 0.2rem 1rem 0.2rem;
+                        }
+    
+                        .restOftextForNavigationSumarry {
+                            padding: 0;
+                            margin: 1rem 1rem 1rem 0rem;
+                        }
                         
                     }
 
