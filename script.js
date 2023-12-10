@@ -156,4 +156,18 @@ window.onload = function () {
       });
     }
   });
+
+  const urlForFetching = "https://api.github.com/users/GramenCeleritas/repos";
+
+  const repos = document.querySelector(".repos");
+
+  async function myProjectsFetchFromGit() {
+    myRepoGitList = await fetch(urlForFetching);
+
+    myRepoGitListRaw = await myRepoGitList.json();
+
+    console.log(myRepoGitListRaw);
+  }
+
+  myProjectsFetchFromGit();
 };
