@@ -1,1 +1,1 @@
-## This is me cv on html
+## This is my cv on html, css and javascript
