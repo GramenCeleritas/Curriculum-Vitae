@@ -98,7 +98,69 @@ window.onload = function() {
     
 
         console.log('page are fully loaded')
+    // Navigation through  key press
     
+    const body = document.querySelector('body')
+    const letterForNavigationSumarry = document.getElementsByClassName('headerLetterForNavigationSumarry')[0];
+    const letterForNavigationSkills = document.getElementsByClassName('headerLetterForNavigationSkills')[0];
+    const headerLetterForNavigationWorkExpirience = document.getElementsByClassName('headerLetterForNavigationWorkExpirience')[0];
+    const headerLetterForNavigationEducation = document.getElementsByClassName('headerLetterForNavigationEducation')[0];
+    const headerLetterForNavigationMotivationSheet = document.getElementsByClassName('headerLetterForNavigationMotivationSheet')[0];
+   
+
+    let currentSection = 0;
+
+    body.addEventListener('keyup', (event) => {
+
+        
+
+        if (event.keyCode === 83) {
+            
+            currentSection++;
+
+
+            const sections = [letterForNavigationSumarry,letterForNavigationSkills]
+
+
+            if (currentSection >= sections.length) {
+                currentSection = 0;
+            }
+
+            sections[currentSection].scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+            console.log('Scrolled to section' + sections[currentSection])
+
+            // if (clickCount % 2 === 1) {
+            //     letterForNavigationSumarry.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+            //     console.log('you have pushed the button');
+            // }
+
+            // if (clickCount % 2 === 0) {
+            //     letterForNavigationSkills.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+            //     console.log('you suppose to be in skills section now');
+            // }
+        }
+
+        if (event.keyCode === 87) {
+            headerLetterForNavigationWorkExpirience.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+        }
+
+        if (event.keyCode === 69) {
+            headerLetterForNavigationEducation.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+        }
+
+        if (event.keyCode === 77) {
+            headerLetterForNavigationMotivationSheet.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+        }
+    })
+
+
+    
+
+    
+
+    
+
+
     
 }
 

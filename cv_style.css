@@ -168,7 +168,7 @@ body .mainframe .leftbar .contactpart {
 }
 body .mainframe .leftbar .underline {
   font-size: 10px;
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 }
 body .mainframe .leftbar .button_forLanguageChangeContainer {
   margin: 30px 0 0 0;
@@ -276,17 +276,72 @@ body .mainframe .rightbar .main_right_bar .summaryBoldText {
   font-weight: bold;
 }
 body .mainframe .rightbar .main_right_bar .headline1 {
-  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   border-bottom: 5px solid #000000;
-  margin-bottom: 25px;
   font-size: 36px;
   font-weight: 600;
   line-height: 0px;
   letter-spacing: 0em;
   text-align: left;
+  margin: 0;
+  padding: 0;
+}
+body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForNavigationSumarry {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #722c2c;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0.4rem 1rem 0.4rem;
+}
+body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForNavigationSkills {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #3a722c;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0.4rem 1rem 0.4rem;
+}
+body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForNavigationWorkExpirience {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #2c3972;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0.2rem 1rem 0.2rem;
+}
+body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForNavigationEducation {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #6c2c72;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0.4rem 1rem 0.4rem;
+}
+body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForNavigationMotivationSheet {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #2c6a72;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0.2rem 1rem 0.2rem;
+}
+body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForMyProjects {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #2c6a72;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0.2rem 1rem 0.2rem;
+}
+body .mainframe .rightbar .main_right_bar .headline1 .restOftextForNavigationSumarry {
+  padding: 0;
+  margin: 1rem 1rem 1rem 0rem;
+}
+body .mainframe .rightbar .main_right_bar .firstjob {
+  margin-top: 1rem;
 }
 body .mainframe .rightbar .main_right_bar .secondEducation {
   margin: 15px 0px 0px 0px;
+}
+body .mainframe .rightbar .main_right_bar .FirstEducationBlock {
+  margin-top: 1rem;
 }
 body .mainframe .rightbar .main_right_bar .аdditional_education_line {
   border-bottom: 0.1rem solid #000;
