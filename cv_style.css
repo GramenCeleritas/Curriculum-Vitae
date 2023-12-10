@@ -65,6 +65,7 @@ body .mainframe {
 }
 body .mainframe .headline {
   font-weight: bold;
+  margin: 0 0 0 0;
 }
 body .mainframe .leftbar {
   display: flex;
