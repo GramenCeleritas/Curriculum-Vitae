@@ -168,7 +168,7 @@ body .mainframe .leftbar .contactpart {
 }
 body .mainframe .leftbar .underline {
   font-size: 10px;
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 }
 body .mainframe .leftbar .button_forLanguageChangeContainer {
   margin: 30px 0 0 0;
@@ -317,6 +317,13 @@ body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForNavigationE
   padding: 1rem 0.4rem 1rem 0.4rem;
 }
 body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForNavigationMotivationSheet {
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: #2c6a72;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0.2rem 1rem 0.2rem;
+}
+body .mainframe .rightbar .main_right_bar .headline1 .headerLetterForMyProjects {
   border-width: 0.2rem;
   border-style: solid;
   border-color: #2c6a72;

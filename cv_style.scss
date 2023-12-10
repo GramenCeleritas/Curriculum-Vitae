@@ -248,8 +248,9 @@ body {
                 
                 .underline {
                     font-size: 10px;
-                    margin-top: 5px;
+                    margin: 5px 0 0 0;
                 }
+
 
                 .button_forLanguageChangeContainer {
                     
@@ -410,6 +411,12 @@ body {
                         }
 
                         .headerLetterForNavigationMotivationSheet {
+                            @include borderForNavElements(0.2rem, solid, #2c6a72);
+                            margin: $margin_for_nav;
+                            padding: 1rem 0.2rem 1rem 0.2rem;
+                        }
+
+                        .headerLetterForMyProjects {
                             @include borderForNavElements(0.2rem, solid, #2c6a72);
                             margin: $margin_for_nav;
                             padding: 1rem 0.2rem 1rem 0.2rem;
