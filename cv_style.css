@@ -360,6 +360,9 @@ body .mainframe .rightbar .main_right_bar .skills {
   gap: 300px;
   font-weight: bold;
 }
+body .mainframe .rightbar .main_right_bar .secondjob {
+  margin: 1rem 0 0 0;
+}
 body #Ukr {
   display: none;
 }

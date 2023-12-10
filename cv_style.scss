@@ -462,12 +462,9 @@ body {
 
                     
                     
-                    // .secondjob {
-                    //     opacity: 0.7;
-                    //     &:hover {
-                    //         @include secondjobhover($breakpoint-small);
-                    //     }
-                    // }    
+                    .secondjob {
+                        margin: 1rem 0 0 0;
+                    }    
                 }
 
             }
