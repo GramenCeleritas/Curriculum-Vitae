@@ -159,15 +159,81 @@ window.onload = function () {
 
   const urlForFetching = "https://api.github.com/users/GramenCeleritas/repos";
 
-  const repos = document.querySelector(".repos");
+  const repos = document.querySelector(".fetchedDataFromGithub");
+
+  const repoElement = document.createElement("div");
+
+  let classCounter = 0;
 
   async function myProjectsFetchFromGit() {
-    myRepoGitList = await fetch(urlForFetching);
+    try {
+      // debugger;
+      myRepoGitList = await fetch(urlForFetching);
 
-    myRepoGitListRaw = await myRepoGitList.json();
+      if (!myRepoGitList.ok) {
+        throw new Error(
+          `Failed to fetch repositories. Status: ${response.status}`
+        );
+      }
 
-    console.log(myRepoGitListRaw);
+      myRepoGitListRaw = await myRepoGitList.json();
+
+      console.log(myRepoGitListRaw + ` this is raw repo list`);
+
+      myRepoGitListRaw.forEach((repo) => {
+        classCounter++;
+
+        const wrapperForContent = document.createElement("div");
+
+        const { full_name, html_url, description } = repo;
+
+        const repoElement = document.createElement("div");
+        repoElement.classList.add("repository");
+
+        const nameElement = document.createElement("a");
+        nameElement.href = html_url;
+        nameElement.textContent = full_name;
+
+        const descriptionElement = document.createElement("p");
+        descriptionElement.textContent =
+          description || "No description provided.";
+
+        repos.appendChild(repoElement);
+        repoElement.appendChild(wrapperForContent);
+        wrapperForContent.appendChild(nameElement);
+        wrapperForContent.appendChild(descriptionElement);
+
+        nameElement.classList.add(`name-number-${classCounter.toString()}`);
+
+        repoElement.style.border = "solid";
+        repoElement.style.margin = "1rem 0 0 0";
+        wrapperForContent.style.margin = "1rem 0 0 1rem";
+      });
+    } catch (error) {
+      console.log("Error fetching repositories");
+    }
   }
+
+  //   setInterval(() => {
+  //     for (let i = 0; i < 10; i++) {
+  //       const repoElement = document.createElement("div");
+  //       repoElement.setAttribute("id", i);
+  //       repos.appendChild(repoElement);
+  //       repoElement.textContent = Math.floor(Math.random() * 99);
+  //     }
+  //   }, 1000);
+
+  //   setInterval(() => {
+  //     while (repos.firstChild) {
+  //       repos.removeChild(repos.firstChild);
+  //     }
+  //   }, 6000);
+
+  //   setInterval(() => {
+  //     while (document.firstChild) {
+  //       document.removeChild(document.firstChild);
+  //     }
+  //   }, 6000);
 
   myProjectsFetchFromGit();
 };
