@@ -105,19 +105,26 @@ window.onload = function () {
       "headerLetterForNavigationMotivationSheet"
     )[0];
 
+  const headerLetterForNavigationMyProjects = document.getElementsByClassName(
+    "headerLetterForMyProjects"
+  )[0];
+
   let currentSection = 0;
 
   body.addEventListener("keyup", (event) => {
     if (event.keyCode === 83) {
       currentSection++;
 
-      const sections = [letterForNavigationSumarry, letterForNavigationSkills];
+      const sectionsForSLetter = [
+        letterForNavigationSumarry,
+        letterForNavigationSkills,
+      ];
 
-      if (currentSection >= sections.length) {
+      if (currentSection >= sectionsForSLetter.length) {
         currentSection = 0;
       }
 
-      sections[currentSection].scrollIntoView({
+      sectionsForSLetter[currentSection].scrollIntoView({
         behavior: "smooth",
         block: "start",
         inline: "nearest",
@@ -133,6 +140,27 @@ window.onload = function () {
       //     letterForNavigationSkills.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
       //     console.log('you suppose to be in skills section now');
       // }
+    }
+
+    let currentSectionForMLetter = 0;
+
+    if (event.keyCode === 77) {
+      currentSectionForMLetter++;
+
+      const sectionsForMLetter = [
+        headerLetterForNavigationMotivationSheet,
+        headerLetterForNavigationMyProjects,
+      ];
+
+      if (currentSectionForMLetter >= sectionsForMLetter.length) {
+        currentSectionForMLetter = 0;
+      }
+
+      sectionsForMLetter[currentSectionForMLetter].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
     }
 
     if (event.keyCode === 87) {
@@ -157,6 +185,9 @@ window.onload = function () {
         block: "start",
         inline: "nearest",
       });
+    }
+
+    if (event.keyCode === 77) {
     }
   });
 
