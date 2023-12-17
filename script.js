@@ -170,7 +170,7 @@ window.onload = function () {
 
   let classCounter = 0;
 
-  async function myProjectsFetchFromGit() {
+  async function myProjectsFetchFromGit(ukr, eng) {
     try {
       // debugger;
       myRepoGitList = await fetch(urlForFetching);
@@ -189,27 +189,56 @@ window.onload = function () {
         classCounter++;
 
         const wrapperForContent = document.createElement("div");
+        const wrapperForContentUkr = document.createElement("div");
 
         const { full_name, html_url, description } = repo;
 
         const repoElement = document.createElement("div");
+        const repoElementUkr = document.createElement("div");
         repoElement.classList.add("repository");
+        repoElementUkr.classList.add("repositoryUkr");
 
         const nameElement = document.createElement("a");
+        const nameElementUkr = document.createElement("a");
         nameElement.href = html_url;
         nameElement.textContent = full_name;
 
+        nameElementUkr.href = html_url;
+        nameElementUkr.textContent = full_name;
+
         const descriptionElement = document.createElement("p");
+        const descriptionElementUkr = document.createElement("p");
         descriptionElement.textContent =
           description || "No description provided.";
 
-        repos.appendChild(repoElement);
+        descriptionElementUkr.textContent =
+          description || "No description provided.";
 
+        repos.appendChild(repoElement);
+        reposUkr.appendChild(repoElementUkr);
+
+        //eng version
         repoElement.appendChild(wrapperForContent);
         wrapperForContent.appendChild(nameElement);
         wrapperForContent.appendChild(descriptionElement);
 
+        //ukr version
+
+        repoElementUkr.appendChild(wrapperForContentUkr);
+        wrapperForContentUkr.appendChild(nameElementUkr);
+        wrapperForContentUkr.appendChild(descriptionElementUkr);
+
         nameElement.classList.add(`name-number-${classCounter.toString()}`);
+
+        repoElement.style.border = "solid";
+        repoElement.style.margin = "1rem 0 0 0";
+        wrapperForContent.style.margin = "1rem 0 0 1rem";
+
+        //ukr version
+
+        repoElementUkr.style.border = "solid";
+        repoElementUkr.style.margin = "1rem 0 0 0";
+        wrapperForContentUkr.style.margin = "1rem 0 0 1rem";
 
         repoElement.style.border = "solid";
         repoElement.style.margin = "1rem 0 0 0";
