@@ -7,6 +7,7 @@ window.onload = function () {
   );
   buttonForChangeLanguage.addEventListener("click", () => {
     changeLanguageToUkr();
+
     console.log("you have clicked the mouse on EngButton");
   });
 
@@ -17,9 +18,11 @@ window.onload = function () {
     imageOfFaceUkr.classList.remove("unscaled");
     imageOfFace.classList.remove("unscaled");
     imageOfFace.classList.remove("scaled");
+    debugger;
+    myProjectsFetchFromGit();
   }
 
-  let buttonForChangeLanguageToEng = document.getElementById(
+  const buttonForChangeLanguageToEng = document.getElementById(
     "buttonLanguageChangerUkr"
   );
   buttonForChangeLanguageToEng.addEventListener("click", () => {
@@ -159,9 +162,11 @@ window.onload = function () {
 
   const urlForFetching = "https://api.github.com/users/GramenCeleritas/repos";
 
-  const repos = document.querySelector(".fetchedDataFromGithub");
+  const repos = document.getElementsByClassName("fetchedDataFromGithub")[0];
 
-  const repoElement = document.createElement("div");
+  const reposUkr = document.getElementsByClassName(
+    "fetchedDataFromGithubUkr"
+  )[0];
 
   let classCounter = 0;
 
@@ -199,6 +204,7 @@ window.onload = function () {
           description || "No description provided.";
 
         repos.appendChild(repoElement);
+
         repoElement.appendChild(wrapperForContent);
         wrapperForContent.appendChild(nameElement);
         wrapperForContent.appendChild(descriptionElement);
