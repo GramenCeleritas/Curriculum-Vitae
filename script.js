@@ -249,6 +249,18 @@ window.onload = function () {
     }
   }
 
+  const NotificationForButton = document.querySelector(
+    ".notificationAbouthLanguageChange"
+  );
+
+  setTimeout(() => {
+    NotificationForButton.classList.add("appearNotification");
+  }, 200);
+
+  setTimeout(() => {
+    NotificationForButton.classList.remove("appearNotification");
+  }, 5000);
+
   //   setInterval(() => {
   //     for (let i = 0; i < 10; i++) {
   //       const repoElement = document.createElement("div");
