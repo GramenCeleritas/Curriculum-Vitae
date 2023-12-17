@@ -252,6 +252,49 @@ body {
                     margin: 5px 0 0 0;
                 }
 
+                .notificationAbouthLanguageChange {
+                    position: absolute;
+                    align-items: center;
+                        background-color: rgb(1, 131, 238);
+                        border: 2px solid rgb(33, 122, 255);
+                        box-sizing: border-box;
+                        color: #fff;
+                        cursor: pointer;
+                        display: inline-flex;
+                        fill: #000;
+                        font-family: Inter,sans-serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        height: 48px;
+                        justify-content: center;
+                        letter-spacing: -.8px;
+                        line-height: 24px;
+                        min-width: 140px;
+                        outline: 0;
+                        padding: 0 17px;
+                        text-align: center;
+                        text-decoration: none;
+                        transition: all .3s;
+                        user-select: none;
+                        -webkit-user-select: none;
+                        touch-action: manipulation;
+                        width: 2.5rem;
+                        height: 5rem;
+                        text-align: start;
+                        font-size: 0.8rem;
+                        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5); 
+                        margin: 0 0 0 1rem;
+                        transform: translateY(20rem);
+                        opacity: 0;
+                        transition: transform 1s ease-in-out, opacity 0.3s ease-in;
+                        
+                }
+
+                .appearNotification {
+                    opacity: 1;
+                    transform: translateY(0rem);
+                   
+                }
 
                 .button_forLanguageChangeContainer {
                     
