@@ -7,6 +7,7 @@ window.onload = function () {
   );
   buttonForChangeLanguage.addEventListener("click", () => {
     changeLanguageToUkr();
+
     console.log("you have clicked the mouse on EngButton");
   });
 
@@ -17,9 +18,11 @@ window.onload = function () {
     imageOfFaceUkr.classList.remove("unscaled");
     imageOfFace.classList.remove("unscaled");
     imageOfFace.classList.remove("scaled");
+    debugger;
+    myProjectsFetchFromGit();
   }
 
-  let buttonForChangeLanguageToEng = document.getElementById(
+  const buttonForChangeLanguageToEng = document.getElementById(
     "buttonLanguageChangerUkr"
   );
   buttonForChangeLanguageToEng.addEventListener("click", () => {
@@ -159,15 +162,113 @@ window.onload = function () {
 
   const urlForFetching = "https://api.github.com/users/GramenCeleritas/repos";
 
-  const repos = document.querySelector(".repos");
+  const repos = document.getElementsByClassName("fetchedDataFromGithub")[0];
 
-  async function myProjectsFetchFromGit() {
-    myRepoGitList = await fetch(urlForFetching);
+  const reposUkr = document.getElementsByClassName(
+    "fetchedDataFromGithubUkr"
+  )[0];
 
-    myRepoGitListRaw = await myRepoGitList.json();
+  let classCounter = 0;
 
-    console.log(myRepoGitListRaw);
+  async function myProjectsFetchFromGit(ukr, eng) {
+    try {
+      // debugger;
+      myRepoGitList = await fetch(urlForFetching);
+
+      if (!myRepoGitList.ok) {
+        throw new Error(
+          `Failed to fetch repositories. Status: ${response.status}`
+        );
+      }
+
+      myRepoGitListRaw = await myRepoGitList.json();
+
+      console.log(myRepoGitListRaw + ` this is raw repo list`);
+
+      myRepoGitListRaw.forEach((repo) => {
+        classCounter++;
+
+        const wrapperForContent = document.createElement("div");
+        const wrapperForContentUkr = document.createElement("div");
+
+        const { full_name, html_url, description } = repo;
+
+        const repoElement = document.createElement("div");
+        const repoElementUkr = document.createElement("div");
+        repoElement.classList.add("repository");
+        repoElementUkr.classList.add("repositoryUkr");
+
+        const nameElement = document.createElement("a");
+        const nameElementUkr = document.createElement("a");
+        nameElement.href = html_url;
+        nameElement.textContent = full_name;
+
+        nameElementUkr.href = html_url;
+        nameElementUkr.textContent = full_name;
+
+        const descriptionElement = document.createElement("p");
+        const descriptionElementUkr = document.createElement("p");
+        descriptionElement.textContent =
+          description || "No description provided.";
+
+        descriptionElementUkr.textContent =
+          description || "No description provided.";
+
+        repos.appendChild(repoElement);
+        reposUkr.appendChild(repoElementUkr);
+
+        //eng version
+        repoElement.appendChild(wrapperForContent);
+        wrapperForContent.appendChild(nameElement);
+        wrapperForContent.appendChild(descriptionElement);
+
+        //ukr version
+
+        repoElementUkr.appendChild(wrapperForContentUkr);
+        wrapperForContentUkr.appendChild(nameElementUkr);
+        wrapperForContentUkr.appendChild(descriptionElementUkr);
+
+        nameElement.classList.add(`name-number-${classCounter.toString()}`);
+
+        repoElement.style.border = "solid";
+        repoElement.style.margin = "1rem 0 0 0";
+        wrapperForContent.style.margin = "1rem 0 0 1rem";
+
+        //ukr version
+
+        repoElementUkr.style.border = "solid";
+        repoElementUkr.style.margin = "1rem 0 0 0";
+        wrapperForContentUkr.style.margin = "1rem 0 0 1rem";
+
+        repoElement.style.border = "solid";
+        repoElement.style.margin = "1rem 0 0 0";
+        wrapperForContent.style.margin = "1rem 0 0 1rem";
+      });
+    } catch (error) {
+      console.log("Error fetching repositories");
+    }
   }
+
+  //   setInterval(() => {
+  //     for (let i = 0; i < 10; i++) {
+  //       const repoElement = document.createElement("div");
+  //       repoElement.setAttribute("id", i);
+  //       repos.appendChild(repoElement);
+  //       repoElement.textContent = Math.floor(Math.random() * 99);
+  //     }
+  //   }, 1000);
+
+  //   setInterval(() => {
+  //     while (repos.firstChild) {
+  //       repos.removeChild(repos.firstChild);
+  //     }
+  //   }, 6000);
+
+  //   setInterval(() => {
+  //     while (document.firstChild) {
+  //       document.removeChild(document.firstChild);
+  //     }
+  //   }, 6000);
 
   myProjectsFetchFromGit();
 };
